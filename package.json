@@ -1,0 +1,53 @@
+{
+  "name": "automately-lib-manager",
+  "version": "1.0.1",
+  "description": "automately is an N-API module for desktop automation with node",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "publish:next": "npm publish --tag next",
+    "prepare": "node -e \"require('prepare-package')()\"",
+    "prepare:watch": "nodemon -w ./src -e '*' --exec 'npm run prepare'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itw-creative-works/automately-lib-manager.git"
+  },
+  "keywords": [
+    "GUI",
+    "Automation",
+    "mouse",
+    "keyboard",
+    "screenshot",
+    "image",
+    "desktop",
+    "screen",
+    "recognition",
+    "autohotkey"
+  ],
+  "author": "ITW Creative Works",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/itw-creative-works/automately-lib-manager/issues"
+  },
+  "homepage": "https://github.com/itw-creative-works/automately-lib-manager",
+  "engines": {
+    "node": ">=10.15.3"
+  },
+  "preparePackage": {
+    "input": "./src",
+    "output": "./dist",
+    "replace": {}
+  },
+  "dependencies": {
+    "automately-lib-darwin": "^1.0.1",
+    "automately-lib-linux": "^1.0.1",
+    "automately-lib-win32": "^1.0.1",
+    "itwcw-package-analytics": "^1.0.4"
+  },
+  "devDependencies": {
+    "jest": "27.4.5",
+    "prepare-package": "^1.1.12"
+  }
+}
